@@ -1,0 +1,31 @@
+/*con asterisco aplicamos estilos a todos
+Esto sería una normalizacion de estilos*/
+* {
+    box-sizing: border-box;
+    /*por defecto es content box que es lo que hace que la caja crezca sumandole
+    los espacios del padding y del border*/
+}
+
+div {
+    /*div es contenedor inblock, nunca se pone al lado si no lo forzamos*/
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+
+    /*padding: margen interno: desde el borde del contenedor al contenido*/
+    padding: 25px;
+    /*por todos los lados igual*/
+    padding: 50px 25px;
+    /*arriba-abajo izquierda-derecha*/
+    padding: 10px 10px 10px 10px;
+    /*arriba derecha abajo izquierda*/
+    /*padding-top: 50px; se puede especificar con nombre left right up down*/
+
+    /*BORDER: valores-> tamaño, estilo de la linea (solid, dashed, double y dot) y color*/
+    border: 10px solid blue;
+    /*border-color: beige; tambien se puede especificar en vez de poner todo enuna linea*/
+
+    margin: 10px 20px 30px 40px;
+    /*es igual que padding, se puede especificar*/
+
+}

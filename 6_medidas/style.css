@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.fijas {
+    width: 500px;
+    height: 400px;
+    background-color: blue;
+}
+
+.maximas {
+    /*mientras la pagina sea menor de 700 la caja se adaptará
+    cuando llegue a 700 se quedará en ese valor*/
+    max-width: 700px;
+    /*existe min-width tambien*/
+    /*max-height existe pero normalmente el alto se adapta al
+    contenido normalmente texto*/
+    background-color: rgb(112, 175, 40);
+}
+
+.porcentaje {
+    /*con porcentaje ocupa el 80% del body
+     o de contenedor donde esté metido*/
+    width: 80%;
+    background-color: aqua;
+}
+
+.viewport {
+    /*viewport es el tamaño del navegador donde se visualiza la pagina*/
+    width: 50vw;
+    /*50% del viewport width*/
+    height: 20vh;
+    /*20% del viewport height*/
+    /*css mira el tamaño del viewport del navegador
+    guarda variable
+    compara con lo que pedimos y da medidas por lo tanto
+    si 100vh se quedará en cada momento de cambio de tam
+    del navegador cambiará*/
+    background-color: yellow;
+    padding: 10px;
+    margin: 10px;
+}
+
+ul {
+    padding-left: 30px;
+    /* list-style: none; quita los puntos*/
+
+    /*el margen comienza desde los puntos
+        no es compatible con none logicamente pero si 
+        con list-style-image*/
+    list-style: inside;
+    /*o podria usar ---> list-style-position: inside;*/
+
+    list-style-image: url("../../HTML/4_imagenes/images/favicon.ico");
+}

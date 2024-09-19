@@ -1,0 +1,72 @@
+/*importado de google fonts*/
+/* OJO poner --> PRIMERO GOOGLE FONTS <--- o no se carga bien */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+/*la EXTENSION para google fonts es ctrl+mayus+p o ir al buscardor y escribir >google
+escribir > en la barra de buscador es para escribir comandos en vez de buscar 
+archivos*/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+/*FONT AWESOME
+Como se usan:
+se usa la etiqueta <i> es como un span, elemento en linea
+<i class="buscar en la pagina lo que va aqui"></i>
+*/
+
+@font-face {
+    /*definimos el nombre por el que llamaremos a la fuente*/
+    font-family: "poppins";
+    /*definir url de la fuente y formato de la fuente*/
+    src: url(../7_fuentes/fonts/poppins/Poppins-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*el tamaño por defecto es 16px excepto los haches*/
+    /*Sistema de medidas px, em, rem:
+    em y rem se puede usar comas 0.2em como si fuera porcentajes
+    - em hace referencia al contenedor superior que tenga 
+    indicado tamaño de fuente
+    - rem hace referencia al tamaño del body (rem root em)*/
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    color: lightcoral;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+p {
+    /*altura de las lineas OJO se pueden
+    superponer si el valor es menor que el tam fuente*/
+    line-height: 30px;
+
+    text-align: center;
+    /*forzar a mayus, minus o capitalize*/
+    text-transform: uppercase;
+
+    text-decoration: underline;
+
+    /*offset x - offset y  - blur - color*/
+    text-shadow: 5px 5px 10px red;
+    /*para cajas seria box-shadow*/
+    font-family: "poppins";
+}
+
+a {
+    text-decoration: none;
+    font-family: "poppins";
+}
+
+.pata {
+    color: red;
+    padding: 0 10px 0 10px;
+}

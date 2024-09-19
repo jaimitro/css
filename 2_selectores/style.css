@@ -1,0 +1,37 @@
+p {
+    color: brown;
+}
+
+/* a misma espeficidad gana el de mas abajo*/
+div p {
+    color: yellow;
+}
+
+section p {
+    color: blue;
+}
+
+#segSec {
+    color: pink;
+}
+
+p .par1 {
+    /*aplica solo a los p que tengan la clase par1.
+    Al div donde hemos aplicado la clase par no funciona porque no es un p*/
+    color: green;
+}
+
+p .par2 {
+    /*OJO un elemento cualquiera con clase par2 dentro de un p*/
+    color: blue;
+}
+
+p.par2 {
+    /*OJO diferente de arriba: esto es un p con clase par2*/
+    color: blue;
+}
+
+p>.par2 {
+    /*OJO un elemento cualquiera con clase par2 DIRECTAMENTE dentro de un p*/
+    color: blue;
+}

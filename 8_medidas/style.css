@@ -1,0 +1,36 @@
+@import url("reset.css");
+
+body {
+    font-size: 24px;
+
+    /*si el usuario a configurado fuente a 33px yo respeto ese tamaño*/
+    font-size: 100%;
+
+    /*tamaño en funcion del contenedor que tenga declarado un tamaño*/
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+article {
+    font-size: 2em;
+}
+
+p {
+    font-size: 2em;
+}
+
+/*
+el body tiene 16px porque es su tamaño original 1em
+
+el h1 tiene el triple del body que es el contenedor que tiene algo definido
+
+el article (el doble de body) esta contenido en section pero como section
+no se le ha definido nada a posta entonces sigue hasta body
+
+el p sube hasta article que ya era el doble de body con lo que sera
+cuatro veces el body
+
+Xrem mira a la raiz directamente saltando los contenedores entremedias
