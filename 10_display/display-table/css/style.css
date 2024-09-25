@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas no se expandan al darle margin o pading*/
+    margin: 0;
+    padding: 0;
+}
+
+.tabla {
+    display: table;
+    width: 100%;
+}
+
+.tabla>div {
+    /*a los <div> directamente hijos de .tabla*/
+    display: table-row;
+}
+
+.tabla>div>div {
+    /*a los <div> que sean hijos de otro <div>*/
+    display: table-cell;
+}

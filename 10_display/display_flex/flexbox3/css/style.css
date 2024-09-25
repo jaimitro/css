@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    /*quiero decirdir que cada elemento ocupe los pixels exactos, tengo que
+    forzar a flex con flex-wrap: wrap (por defecto es nowrap)
+    OJO <--- si añadimos gaps o margins y los % de cada elemento abajo suman 100%,
+    los gaps aumentarán esa suma haciendo saltar de linea*/
+    flex-wrap: wrap;
+
+    /*nowrap (por default) adapta los anchos tanto si son % como px
+    para que NO salte de linea cada elemento si no cabe*/
+
+}
+
+section article {
+    background-color: aqua;
+    color: blueviolet;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    border: 1px solid black;
+}
+
+.caja1 {
+    width: calc(100% - 10px);
+}
+
+.caja2 {
+    width: calc(70% - 10px);
+}
+
+.caja3 {
+    width: calc(30% - 10px);
+}
+
+.caja4 {
+    width: calc(100% - 10px);
+}

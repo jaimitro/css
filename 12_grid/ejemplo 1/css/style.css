@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.grid {
+    /*formato de grid*/
+    display: grid;
+    /*grid-templates-columns: cuantas columnas quiero y que tamaño
+    pe tres columnas de 20 50 y 30 por ciento. Necesito calc para
+    arreglar el espacio que suma con los huecos*/
+    /* grid-template-columns: calc(20% - 10px) calc(50% - 10px) 30%; */
+
+    /*repeat nos permite no repetir x veces el mismo numero*/
+    /*grid-template-columns: repeat(4, 25%); */
+
+    /*trabajar con fracciones, en este caso no es necesario arreglar los huecos
+    con calc*/
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 0.5fr 4fr 2fr 1fr; */
+
+    /*ROWS
+    dos filas de 10% de la altura del viewport, el resto de filas
+    se quedan con su alto segun su contenido (auto se adapta al contenido)*/
+    /* grid-template-rows: 300px 50vh auto; */
+
+    /*las tres iguales con minimo de 200px y si el contenido crece
+    se adaptara*/
+    grid-template-rows: repeat(3, minmax(200px, auto));
+
+    /* gap: 10px; podemos especificar cada uno*/
+    padding: 10px;
+
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+article {
+    background-color: lightcoral;
+    border: 1px solid black;
+}

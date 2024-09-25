@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.uno,
+.dos,
+.tres {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+}
+
+.uno {
+    background-color: lightgray;
+}
+
+.dos {
+    background-color: rgb(173, 114, 114);
+    /*fixed se queda donde está segun su flujo de creacion (y su html) pero 
+    se pouede cambiar mediante top,left,...*/
+    position: fixed;
+    /*se queda fijo en su flujo pero al pasar el scroll se va con él quedandose*/
+    /* position: sticky; */
+    top: 10px;
+    left: 100px;
+    z-index: 1;
+}
+
+.tres {
+    background-color: rgb(125, 135, 230);
+}

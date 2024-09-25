@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Ejemplo en modo nesting-->
+    <style>
+        .btn {
+            a {
+
+                text-decoration: none;
+                color: white;
+                background-color: lightblue;
+                display: inline-block;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 5px grey;
+                /*da transicion en tiempo de la propiedad dicha*/
+                transition: 2s transform, 1s margin-left, 2s background-color;
+
+                &:hover {
+                    background-color: black;
+                    margin-left: 20px;
+
+                    /*escalamos en 1.5% , se puede usar por separado scaleX o scaleY*/
+                    transform: scale(1.5) rotateZ(45deg);
+                    /*rotateZ rotamos en eje Z*/
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn">
+        <a href="">VER MAS</a>
+    </div>
+</body>
+
+</html>

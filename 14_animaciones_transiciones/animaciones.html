@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pelota {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: lightcoral;
+            /*para poderlo mover por el viewport*/
+            position: relative;
+
+            /*nombre de la animacion, es el identificador*/
+            animation-name: AniPelota;
+            /*duracion*/
+            animation-duration: 4s;
+            /*tiempo que tarda en arrancar*/
+            animation-delay: 1s;
+            /*tipo de animacion ease-in ease-out linear steps(x)*/
+            /*los tipos se pueden buscar en unas paginas mas visuales*/
+            animation-timing-function: cubic-bezier(.05, .46, .96, .08);
+        }
+
+        @keyframes AniPelota {
+
+            /*
+            OJO ---> Tambien se pueden usar TO y FROM
+            to {opacity:0;}
+            from {opacity:100;}
+            */
+            0% {
+                top: 0;
+                left: 0;
+            }
+
+            25% {
+                top: 0;
+                left: 300px;
+            }
+
+            50% {
+                top: 300px;
+                left: 300px;
+            }
+
+            75% {
+                top: 300px;
+                left: 0;
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pelota"></div>
+</body>
+
+</html>

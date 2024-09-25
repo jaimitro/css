@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block
+}
+
+section {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+}
+
+section article {
+    background-color: violet;
+    color: black;
+    font-size: 300%;
+    text-align: center;
+    align-content: center;
+}
+
+/*cuando sea mayor de 426px*/
+@media(min-width: 426px) {
+    section {
+        grid-template-columns: 1fr 1fr;
+        /*solo ocupa lo que contiene*/
+        height: auto;
+    }
+}
+
+/*cuando sea mayor 768px*/
+@media(min-width: 768px) {
+    section {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+/*cuando sea mayor 1005px*/
+/*tambien se puede usar esto    width > 1005px        
+en vez del min-width o max-width*/
+@media(width > 1005px) {
+    section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(width > 1200px) {
+    section {
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+    }
+}

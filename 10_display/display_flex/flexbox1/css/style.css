@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas no se expandan al darle margin o pading*/
+    margin: 0;
+    padding: 0;
+}
+
+/*FLEX la responsabilidad mayoritaria recae sobre
+EL CONTENEDOR no sobre cada elemento*/
+.servicios {
+    display: flex;
+    /*los elementos se colocan inline pero no se repanten en el espacio, solo
+    ocupan lo que les digamos*/
+    gap: 10px;
+    /*row-reverse, column  y column reverse
+    nos cambia de forma en columna o en fila y la invierte segun cada*/
+    flex-direction: row;
+
+    /*crea espacios ENTRE CADA UNO sin hacer espacio al inicio o al final*/
+    padding: 10px;
+    /*este pading al hacerlo en el contenedor principal es mejor
+    que crear margin en cada article*/
+}
+
+.servicios article {
+    width: 100%;
+    /*este 100% dice que el article ocupe el 100% de su padre en
+    este caso <section> si el % es menor pero hay muchos no se nota pero si
+    solo tengo uno y pongo 50% solamente ocupará la mitad del espacio de 
+    <section>*/
+    background-color: tomato;
+    text-align: center;
+    padding: 15px 0;
+    /* margin: 10px; ESTO ES LO QUE PARECERIA QUE HARIAMOS pero al usar 
+    flex no es buena idea, para eso es mejor GAP en el contenedor principal*/
+}

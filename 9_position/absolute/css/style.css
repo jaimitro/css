@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.uno,
+.dos,
+.tres {
+    width: 200px;
+    height: 100px;
+}
+
+.uno {
+    background-color: lightgray;
+    position: absolute;
+    left: 20px;
+}
+
+.dos {
+    background-color: rgb(173, 114, 114);
+}
+
+.tres {
+    background-color: rgb(125, 135, 230);
+}
+
+article {
+    /*solo los h2 que esten dentro de un article*/
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 10px;
+    /*calc es una funcion de calculo
+    si pusiera tres articulos inline cabrian pero al poner pading
+    y margin el ultimo se empujaría abajo, con el calculo no pasaria*/
+    width: calc(33% - 20px);
+    background-color: lightblue;
+    /*para que el dto sepa que este a de ser su padre en cuanto a posicion,
+sino dto miraria al viewport*/
+    position: relative;
+}
+
+.dto {
+    /*absoluta con respecto a su contenedor
+    pero su contenedor ha de ser relativo sino hara referencia al viewport*/
+    position: absolute;
+    top: -10px;
+    right: -11px;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
+    /*radio de los bordes de las cajas*/
+    border-radius: 25%;
+    box-shadow: 3px 3px 5px black;
+}

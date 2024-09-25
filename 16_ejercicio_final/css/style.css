@@ -1,0 +1,290 @@
+/*importamos css reset 2.0 de erik mayer*/
+@import url("./reset.css");
+/*importamos fontawesome*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+/*importamos google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab:regular');
+@import url('https://fonts.googleapis.com/css?family=Athiti:200,300,regular,500,600,700');
+
+/*declarando variables a usar en todo nuestro css*/
+:root {
+    /*con -- se declaran variables, perfecto para colores*/
+    --fuente-prin: "Athiti", sans-serif;
+    --fuente-secun: "Arbutus Slab", serif;
+    --color-prim: #d0a772;
+    --color-sec: #f8f9fa;
+    --text-color: #666666;
+    --gap: 1rem;
+}
+
+body {
+    font-family: var(--fuente-prin);
+    font-size: 1em;
+}
+
+/*contenedor que nos contendrá todo*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*_________________________HEADER____________________________*/
+header {
+    padding: 15px;
+    background-color: var(--color-sec);
+    /*se quede pegada*/
+    position: sticky;
+    /*se quede arriba*/
+    top: 0;
+    /*se quede capa primera*/
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.171);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    /*para decirdir el tamaño de mis elementos*/
+    flex-wrap: wrap;
+}
+
+.container .logo {
+    width: 200px;
+}
+
+.container .tresLineas {
+    cursor: pointer;
+}
+
+.container .tresLineas div {
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-prim);
+    margin: 5px 0;
+}
+
+.container nav {
+    width: 100%;
+    padding: 20px 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--color-prim);
+        color: white;
+    }
+}
+
+/*_________________________HERO____________________________*/
+.hero {
+    /*altura todo viewport*/
+    height: 100vh;
+    background-image: url("../images/slider-01.jpg");
+    background-size: cover;
+    background-position: center center;
+    /*modo multiplicar de la imagen*/
+    background-blend-mode: multiply;
+    /*debajo de la imagen este color para multiplicarse con él*/
+    background-color: #666666;
+    text-align: center;
+    align-content: center;
+    padding: 15px;
+}
+
+.hero h1 {
+    font-family: var(--fuente-secun);
+    font-size: 4rem;
+    color: white;
+}
+
+.hero h4 {
+    font-family: var(--fuente-prim);
+    font-size: 1.5rem;
+    color: white;
+    margin: 20px 0;
+}
+
+.boton {
+    /* background-color: transparent; no hace falta*/
+    border: 2px solid var(--color-prim);
+    padding: 10px 20px;
+    display: inline-block;
+    color: var(--color-prim);
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--color-prim);
+        color: white;
+    }
+}
+
+/*_________________________ABOUT US____________________________*/
+main section {
+    margin: 15px 0;
+}
+
+#aboutUs .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#aboutUs figure {
+    padding: 15px;
+}
+
+#aboutUs .marco {
+    border-top: 10px solid var(--color-prim);
+    border-left: 10px solid var(--color-prim);
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+}
+
+#aboutUs .column {
+    padding: 15px;
+    text-align: center;
+
+}
+
+#aboutUs .column p {
+    color: var(--text-color);
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+
+    span {
+        color: var(--color-prim);
+    }
+}
+
+section h5 {
+    margin: 1rem 0;
+}
+
+/*_________________________call to action____________________________*/
+#callToAction {
+    background-image: url("../images/qt-bg.jpg");
+    padding: 5rem 0;
+    background-size: cover;
+    /*efecto paralax para que no siga al cursor*/
+    background-attachment: fixed;
+    background-position: center center;
+    text-align: center;
+    color: white;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 1.5rem;
+    font-family: var(--fuente-secun);
+    margin: 15px;
+    line-height: 1.5rem;
+}
+
+author {
+    font-size: 0.8rem;
+}
+
+/*_________________________menu____________________________*/
+#nuestroMenu {
+    padding: 1.25rem;
+}
+
+#nuestroMenu h2 {
+    margin-bottom: 2.25rem;
+}
+
+#nuestroMenu .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+}
+
+#nuestroMenu article {
+    position: relative;
+    /*lo que queda fuera ocultalo*/
+    overflow: hidden;
+}
+
+#nuestroMenu article .content {
+    position: absolute;
+    background-color: var(--color-prim);
+    width: 100%;
+    color: white;
+    padding: 0.625rem;
+
+    &:hover {
+        transform: translate(-100px);
+    }
+}
+
+#nuestroMenu article .content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#nuestroMenu article .content p {
+    font-size: 2em;
+    font-family: var(--fuente-secun);
+}
+
+
+
+
+
+
+/*_________________________MEDIAQUERY____________________________*/
+@media (width > 768px) {
+    #nuestroMenu .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width > 992px) {
+    .container .tresLineas {
+        display: none;
+    }
+
+    .container nav {
+        /*200px es el ancho declarado de la imagen*/
+        width: calc(100% - 200px);
+        width: auto;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 5px;
+        justify-content: end;
+    }
+
+    #aboutUs .flex {
+        flex-direction: row;
+    }
+
+    #nuestroMenu .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

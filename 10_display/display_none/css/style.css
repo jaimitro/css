@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-content: center;
+    width: 200px;
+    margin: 20;
+    height: 100px;
+}
+
+/*OPCIONES DE VISUALIZACIÓN*/
+.caja2 {
+    /*oculta un elemento y no reserva el espacio*/
+    display: none;
+    /*oculta un elemento pero SI reserva el espacio*/
+    /* visibility: hidden; */
+    /*transparencia de 1 a 0*/
+    /* opacity: 0.5; */
+}

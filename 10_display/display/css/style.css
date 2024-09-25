@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.boton {
+    display: block;
+    background-color: lightcoral;
+    height: 300px;
+}
+
+.enlaces {
+    display: inline-block;
+    background-color: blue;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+}

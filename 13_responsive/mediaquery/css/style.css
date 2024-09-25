@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caja {
+    /*sisteman de medidas relativo al tamaño por defecto del usuario*/
+    max-width: 43.75rem;
+    /*700px convertidos
+    SELECCIONAR LOS PX y ctrl+shift+p y px converter*/
+    height: 20vh;
+    background-color: black;
+    color: white;
+}
+
+/*estoy dentro de otra hoja de estilo, mediaqueries siempre al final*/
+
+/*MOBILE FIRST
+parto de mobil y voy para arriba
+cuando sea más grande de 800px*/
+@media(min-width: 800px) {
+    .caja {
+        background-color: red;
+    }
+
+}
+
+/*DESKTOP
+parto de desktop y voy bajando
+cuando sea más pequeño de de 600px*/
+@media(max-width: 600px) {
+    .caja {
+        background-color: aqua;
+    }
+}

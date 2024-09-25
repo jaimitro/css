@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*before after se puede añadir estilos pero es limitado,
+NO SE PUEDE AÑADIR HTML PURO, si se puede imagenes, texto plano..*/
+ul li:before {
+    content: url("../images/flecha.png");
+    position: relative;
+    top: 3px;
+    margin: 0 5px 0 15px;
+}
+
+/*estilo sobre el primer hijo de la estructura
+(no tiene porque que ser listas)
+
+Estilos al primer hijo*/
+ul li:first-child {
+    color: blue;
+}
+
+/*aplica al ultimo*/
+ul li:last-child {
+    color: red;
+}
+
+/*numero orden hijo, comenzando por 1*/
+ul li:nth-child(3) {
+    color: rgb(255, 251, 0);
+}
+
+/*numero orden hijo desde abajo, comenzando por 1*/
+ul li:nth-last-child(2) {
+    color: rgb(127, 159, 218);
+}
+
+/*aplica a los pares (odd es nones*/
+ul li:nth-child(even) {
+    color: rgb(206, 169, 90);
+    font-weight: bolder;
+}

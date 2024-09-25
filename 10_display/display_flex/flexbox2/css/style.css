@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    gap: 10px;
+    /*margin: 10px; podria usar esto en vez del padding pero si la section
+    estubiera de hijo de algo sería el margen entre ellos, funciona aqui porque
+    estamos contra el body*/
+    padding: 10px;
+    /*justify-content:
+    start: coloca al principio
+    end: coloca al final
+    space-beetween: los reparte
+    space-around: pone margen a iz y derecha a cada caja pero cuando se junta dos se suman los tamaños
+    space-evenly: reparte los espacios del centro para que todo se distribuya equitativo*/
+    justify-content: space-evenly;
+
+    height: 300px;
+    background-color: bisque;
+
+    align-items: center
+}
+
+section article {
+    background-color: black;
+    color: aliceblue;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    /*OJO <----- este sistema alinea super bien con CENTER alinea en 
+    horizontal y el vertical*/
+    align-content: center;
+}
+
+.caja1 {
+    /*podemos llamar desde el propio elemento contra su padre*/
+    align-self: flex-end;
+}

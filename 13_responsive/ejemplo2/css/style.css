@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background-color: aqua;
+    height: 10vh;
+    text-align: center;
+    align-content: center;
+}
+
+aside {
+    background-color: blue;
+    min-height: 15vh;
+    text-align: center;
+    align-content: center;
+}
+
+section {
+    background-color: brown;
+    min-height: 50vh;
+    text-align: center;
+    align-content: center;
+}
+
+footer {
+    background-color: cadetblue;
+    height: 10vh;
+    text-align: center;
+    align-content: center;
+}
+
+.wrapper {
+    max-width: 1004px;
+    margin: 0 auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: calc(30% - 10px) 70%;
+    gap: 10px;
+}
+
+/*para mobile
+cuando sea menor de 700px*/
+@media (max-width: 700px) {
+    main {
+        /* lo quitaria poruqe sigue igual que arriba
+        - display: grid; */
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    /*cambiamos el orden de la fila, ponemos debajo el aside en vez de arriba*/
+    aside {
+        grid-row: 2/3;
+    }
+
+    footer {
+        background-color: yellow;
+        text-align: right;
+    }
+}

@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.uno,
+.dos,
+.tres {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+    /*relative permite moven libremente los elementos*/
+}
+
+.uno {
+    background-color: lightgray;
+    top: 100px;
+    left: 40px;
+    z-index: 1;
+    /*z-index: num mas alto esta por encima*/
+}
+
+.dos {
+    background-color: rgb(173, 114, 114);
+}
+
+.tres {
+    background-color: rgb(125, 135, 230);
+}

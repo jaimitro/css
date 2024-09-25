@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas crezcan hacia adrentro no hacia afuera*/
+    margin: 0;
+    padding: 0;
+}
+
+.boton {
+    width: 200px;
+    height: 75px;
+    background-color: lightcoral;
+    display: flex;
+    /*centrar vertical*/
+    align-items: center;
+    /*centrar horizontal*/
+    justify-content: center;
+    border-radius: 10px;
+    /*cursor define que el puntero cambie de icono al estar sobre el boton*/
+    cursor: pointer;
+    border: 1px solid lightcoral;
+    /*añade una transicion de 0.4 segundos entre como está declarado todo aqui
+    y como acabará segun el pseudoselector (pe. hover)*/
+    transition: background-color 1.4s, border 1s;
+    /*ojo, con el transition podemos declarar que ha de cambiar, sino TODO se transita, en el ejemplo
+    el margin 100 no se transita porque no lo hemos declarado*/
+    /*OJO LO MISMO ERA EL LIGHTSERVER*/
+    margin: 100px;
+}
+
+.boton:hover {
+    background-color: rgb(204, 135, 135);
+    border: 1px solid rgb(146, 23, 23);
+}
+
+/*reset a imagen para que se adapte al contenedor en el que está*/
+img {
+    width: 100%;
+    /*el height no suele ser necesario*/
+    height: auto;
+}
+
+.imagen {
+    max-width: 400px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+
+    /*lo que sale fuera del tamaño de este contenedor se quedara invisible
+    esto es para la animacion de posicion LEFT. Si uso OPACITY no es necesario*/
+    overflow: hidden;
+}
+
+.imagen:hover .capa_encima {
+    /*arriba apunta a hover sobre .imagen pero que afecte a .capa_encima
+    la ani de opacidad puedo hacer el hover directamente sobre .capa_encima
+    porque no la habría movido a la iz
+    O sea que el cuerpo si está a la iz no puedo hacer el hover sobre él
+    PORQUE ESTÁ A LA IZ y mi cursor estaría sobre el .image no sobre el .capa_encima*/
+    left: 0;
+    opacity: 1;
+}
+
+.capa_encima {
+    color: wheat;
+    background-color: rgba(128, 128, 128, 0.336);
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -400px;
+
+    display: flex;
+    /*centrar vertical*/
+    align-items: center;
+    /*centrar horizontal*/
+    justify-content: center;
+    /*coloca en columna en vez de seguidos*/
+    flex-direction: column;
+
+    transition: left 1s, opacity 1s;
+    opacity: 0;
+
+    /*
+    esto sería si hacemos sin el left
+    opacity: 0;
+    transition: opacity 0.5s;*/
+}
+
+.capa_encima:hover {
+    /*esto solo si no hacemos el left    
+    opacity: 1;*/
+}

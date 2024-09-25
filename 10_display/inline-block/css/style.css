@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    /*hace que las cajas no se expandan al darle margin o pading*/
+    margin: 0;
+    padding: 0;
+}
+
+/*OPCION menu sin listas*/
+.header1 {
+    background-color: rgb(173, 215, 229);
+    padding: 15px;
+}
+
+.header1 a {
+    display: inline-block;
+    padding: 10px;
+    background-color: lightcoral;
+    color: blue;
+    text-decoration: none;
+    text-align: right;
+}
+
+.header1 nav {
+    text-align: right;
+}
+
+/*OPCION menu CON listas*/
+.header2 {
+    background-color: rgb(173, 215, 229);
+    padding: 15px;
+}
+
+.header2 ul {
+    list-style: none;
+    /*quitar puntitos a la lista*/
+}
+
+.header2 ul li {
+    display: inline-block;
+    /*no va en <a> porque cada a esta encapsulado en <li>*/
+}
+
+.header2 ul li a {
+    padding: 10px;
+    background-color: lightcoral;
+    color: blue;
+    text-decoration: none;
+    text-align: right;
+}
+
+.header2 ul {
+    text-align: right;
+}
